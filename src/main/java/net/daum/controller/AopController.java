@@ -33,7 +33,8 @@ public class AopController {
 				.status(HttpStatus.OK)
 				.contentType(MediaType.APPLICATION_JSON)
 				.body(list);
-		System.out.println(list);
+		
+		
 		return entity;
 	}
 	
