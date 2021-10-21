@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.daum.mapper.TestMapper">
+	<select id="list"
+		resultType="net.daum.vo.TestBoard">
+		SELECT * FROM testBoard
+	</select>
+	<select id="getTestBoard"
+		resultType="net.daum.vo.TestBoard">
+		SELECT * FROM testBoard where bno = #{bno}
+	</select>
+	<update id="addHit">
+		update testboard set bhit = #{bhit} where bno = #{bno}
+	</update>
+</mapper>
